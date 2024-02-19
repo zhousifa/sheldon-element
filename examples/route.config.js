@@ -1,6 +1,7 @@
 import navConfig from './nav.config';
 import langs from './i18n/route';
 
+// 不同语言版本的加载页面，包括首页、指南（设计原则、导航）、组件、更新日志、主题、资源
 const LOAD_MAP = {
   'zh-CN': name => {
     return r => require.ensure([], () =>
@@ -28,6 +29,7 @@ const load = function(lang, path) {
   return LOAD_MAP[lang](path);
 };
 
+// 不同语言版本的组件说明文件
 const LOAD_DOCS_MAP = {
   'zh-CN': path => {
     return r => require.ensure([], () =>

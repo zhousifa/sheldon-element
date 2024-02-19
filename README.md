@@ -44,6 +44,40 @@ For Vue 3.0, we recommend using [Element Plus](https://github.com/element-plus/e
 
 For MiniProgram development, we recommend using [MorJS](https://github.com/eleme/morjs)
 
+## 目录简介
+|- build  webpack相关的打包配置文件
+|- examples  Element 官网页面
+  |- assets  官网需要的一些静态资源,例如: 字体、样式、图片
+  |- components  官网的公共组件, 例如: headr、foot
+  |- demo-style  公共组件样式，在其中的index.scss中导入所有样式
+  |- docs/zh-CN  各个组件的文档
+  |- dom class的增删改查
+  |- extension
+  |- i18n
+  |- pages 官网的页面
+  |- play
+  |- app.vue
+  |- bus.js
+  |- color.js
+  |- entry.js
+  |- icon.json
+  |- index.tpl
+  |- nav.config.json
+  |- play.js
+  |- route.config.js  路由配置
+  |- util.js
+  |- versions.json
+|- packages  组件源码
+|- src
+  |- index.js  所有组件注册的入口文件, 该文件由脚本`build/bin/build-entry.js`生成
+|- test  测试文件, 使用 karma 框架
+|- types  类型声明文件
+|- components.json  表明了组件的文件路径，方便webpack打包时获取组件的文件路径
+|- .gitattributes  允许我们指定由git使用的文件和路径的属性
+|- .npmignore  上传npm的配置文件
+|- FAQ.md  常见的组件库问题
+|- Makefile  是一个适用于c/c++的工具，make环境下，输入make命令将会执行makefile文件中的某个目标命令
+
 ## Links
 - Homepage and documentation
   - [International users](http://element.eleme.io/#/en-US)
